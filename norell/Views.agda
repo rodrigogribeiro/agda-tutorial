@@ -141,3 +141,4 @@ infer Γ (app .(erase t₁) .(erase t₂)) | ok (σ ⇒ τ) t₁ | ok σ' t₂ |
 infer Γ (lam σ e) with infer (σ ∷ Γ) e
 infer Γ (lam σ .(erase t)) | ok τ t = ok (σ ⇒ τ) (lam σ t)
 infer Γ (lam σ e)          | bad    = bad
+
